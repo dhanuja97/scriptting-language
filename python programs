@@ -1,0 +1,107 @@
+
+
+
+1)
+
+mydictionary =  {
+"Name" : "Archie",
+"Identity" : "Student",
+"Age" : 17
+}
+print(mydictionary)
+
+key=mydictionary["Name"]
+value=mydictionary.get("Name")
+print("Key is",key)
+print("Value is",value)
+
+2)
+
+x=-3
+
+if x>0.0:
+ print('positive')
+
+elif x<0.0:
+ print('negative')
+ x=-1.0*x
+else:
+ print('zero') 
+
+if x>0.0:
+ print('+ve')
+
+else:
+ if x<0.0:
+  print('-ve')
+  x=-1.0*x
+ else:
+  print('0') 
+
+
+3)
+
+
+students = {'1MS18IS100':'asha','1MS18IS101':'Ashok','1MS18IS102':'rekha','1MS18IS103':'suma'}
+list = ["value1","value2","value3","value4"]
+list2=[]
+j=0
+
+for i in students:
+
+	print("key is",i, "value is",students[i])
+	list[j]=students[i]
+	j=j+1
+
+print(list)
+print(students.keys())
+print(students.values())
+print(students.items())
+
+
+
+4)
+
+class person:
+ 	def __init__(self,name,age):#this is the constructor of the class person
+	  self.name= name;
+	  self.age= age;
+
+p1=person("dhanuja",14)
+p2=person("arpitha",12)
+#to objects s1 and s2 are created. the -init_constructor is automatically called
+print("\nName of the person #1 is",p1.name)
+print("\nage of the person #1 is",p1.age)
+
+print("\nName of the person #2 is",p2.name)
+print("\nage of the person #2 is",p2.age)
+p2.age=10 # attribute of the object can be modified
+
+
+print("\nmodified age of the person #2 is",p2.age)
+
+
+
+
+
+5)#Demo:class in python
+class person:
+	def __init__(self,name,age):#this is the constructor of the class person
+	  self.name= name;
+	  self.age= age;
+
+p1=person("dhanuja",14)
+
+
+print("\nName of the person #1 is",p1.name)
+print("\nage of the person #1 is",p1.age)
+
+print("\n*** Printing after deleting age  attribute for p1***")
+del p1.age #deleting the age attribute for p1 object
+print("\nName of the person #2 is",p1.name)
+
+print("\n*** Printing after deleting p1***")
+del p1
+print("\nName of the person #1 is",p1.name)#this line will give an error
+#error is:Nameerror:name 'p1' is not modified
+
