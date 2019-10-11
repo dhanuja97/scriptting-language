@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>javasceipt tp print odd number witjin a range</title>
+		<script>
+			function printOddNums(){
+			//get the range from the user
+			var start = document.getElementById("start").value;
+			var end = document.getElementById("end").value;
+			var oddNums = "<br>odd number:<br>";
+
+			for(i=start; i<=end; i++){
+			if(i % 2 != 0){
+			oddNums += i + "<br>";
+			}
+		}
+	//print the value
+	document.getElementById("result").innerHTML = oddNums;
+}
+</script>
+</head>
+<body>
+<h3>javascript to print the ODD number within a range</h3>
+start: <input type="number" min="0" id="start" value=""/>
+end: <input type="number" id="end" min="1" value=""/><br>
+<input type="button" onclick="printOddNums()" value="print odd number"/>
+<div id="result"></div>
+</body>
+</html>
+
+			
